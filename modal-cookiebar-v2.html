@@ -8,8 +8,14 @@
 		display: revert;
 	}
 
-	.oscbr button { cursor: pointer; }
-	.oscbr input[type="checkbox"] { appearance: none; -webkit-appearance: none; }
+	.oscbr button {
+		cursor: pointer;
+	}
+
+	.oscbr input[type="checkbox"] {
+		appearance: none;
+		-webkit-appearance: none;
+	}
 
 	/* === Base element styles === */
 	.oscbr p {
@@ -35,10 +41,23 @@
 	}
 
 	/* === Rich text support === */
-	.oscbr p strong, .oscbr p b { font-weight: 600; }
-	.oscbr p em, .oscbr p i { font-style: italic; }
-	.oscbr p u { text-decoration: underline; }
-	.oscbr p br { display: block; }
+	.oscbr p strong,
+	.oscbr p b {
+		font-weight: 600;
+	}
+
+	.oscbr p em,
+	.oscbr p i {
+		font-style: italic;
+	}
+
+	.oscbr p u {
+		text-decoration: underline;
+	}
+
+	.oscbr p br {
+		display: block;
+	}
 
 	.oscbr p a {
 		color: var(--cb-theme);
@@ -46,15 +65,50 @@
 		cursor: pointer;
 		transition: color 0.15s ease;
 	}
-	.oscbr p a:hover { color: var(--cb-theme-hover); text-decoration: none; }
 
-	.oscbr p ul, .oscbr p ol { display: block; margin-left: 20px; margin-top: 0.5em; margin-bottom: 0.5em; }
-	.oscbr p ul { list-style-type: disc; }
-	.oscbr p ol { list-style-type: decimal; }
-	.oscbr p li { display: list-item; margin-bottom: 0.25em; }
-	.oscbr p code { font-family: monospace; background: rgba(0,0,0,0.04); padding: 2px 5px; border-radius: 4px; font-size: 0.9em; }
-	.oscbr p sup { vertical-align: super; font-size: 0.75em; }
-	.oscbr p sub { vertical-align: sub; font-size: 0.75em; }
+	.oscbr p a:hover {
+		color: var(--cb-theme-hover);
+		text-decoration: none;
+	}
+
+	.oscbr p ul,
+	.oscbr p ol {
+		display: block;
+		margin-left: 20px;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	.oscbr p ul {
+		list-style-type: disc;
+	}
+
+	.oscbr p ol {
+		list-style-type: decimal;
+	}
+
+	.oscbr p li {
+		display: list-item;
+		margin-bottom: 0.25em;
+	}
+
+	.oscbr p code {
+		font-family: monospace;
+		background: rgba(0, 0, 0, 0.04);
+		padding: 2px 5px;
+		border-radius: 4px;
+		font-size: 0.9em;
+	}
+
+	.oscbr p sup {
+		vertical-align: super;
+		font-size: 0.75em;
+	}
+
+	.oscbr p sub {
+		vertical-align: sub;
+		font-size: 0.75em;
+	}
 
 	/* === Design tokens === */
 	.oscbr {
@@ -88,8 +142,15 @@
 
 	/* === Fade-in animation === */
 	@keyframes oscbr-fadeIn {
-		from { opacity: 0; transform: translateY(12px); }
-		to { opacity: 1; transform: translateY(0); }
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	/* === Modal content === */
@@ -171,7 +232,7 @@
 	}
 
 	/* === Intro text === */
-	.oscbr .oscbr-modalcontent > p {
+	.oscbr .oscbr-modalcontent>p {
 		color: var(--cb-text-secondary);
 		font-size: 13px;
 		line-height: 1.6;
@@ -364,32 +425,37 @@
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 	}
 
-	.oscbr input:checked + .oscbr-slider {
+	.oscbr input:checked+.oscbr-slider {
 		background-color: var(--cb-theme);
 	}
 
-	.oscbr input:focus + .oscbr-slider {
+	.oscbr input:focus+.oscbr-slider {
 		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 	}
 
-	.oscbr input:focus-visible + .oscbr-slider {
+	.oscbr input:focus-visible+.oscbr-slider {
 		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 	}
 
 	@media (hover: none) and (pointer: coarse) {
-		.oscbr input:active + .oscbr-slider {
+		.oscbr input:active+.oscbr-slider {
 			box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 		}
 	}
 
-	.oscbr input:checked + .oscbr-slider:before {
+	.oscbr input:checked+.oscbr-slider:before {
 		-webkit-transform: translateX(20px);
 		-ms-transform: translateX(20px);
 		transform: translateX(20px);
 	}
 
-	.oscbr .oscbr-slider.oscbr-round { border-radius: 24px; }
-	.oscbr .oscbr-slider.oscbr-round:before { border-radius: 50%; }
+	.oscbr .oscbr-slider.oscbr-round {
+		border-radius: 24px;
+	}
+
+	.oscbr .oscbr-slider.oscbr-round:before {
+		border-radius: 50%;
+	}
 
 	/* === Buttons === */
 	.oscbr div.oscbr-cookie-buttons {
@@ -458,6 +524,7 @@
 		.oscbr div.oscbr-cookie-buttons {
 			flex-direction: column;
 		}
+
 		.oscbr div.oscbr-cookie-buttons button {
 			max-width: 100%;
 			flex: 1 1 auto;
@@ -485,14 +552,14 @@
 	<div class="oscbr-modal-content">
 		<button type="button" class="oscbr-close">&times;<span class="oscbr-sr-only">Close</span></button>
 		<div class="oscbr-modalcontent">
-		<div class="oscbr-header-container">
-			<h2 id="oscbr-cookiebar-title">Header title</h2>
-			<div class="oscbr-language-selector" id="oscbr-language-selector">
-				<select id="oscbr-language-select" tabindex="-1">
-					<!-- Languages will be populated dynamically -->
-				</select>
+			<div class="oscbr-header-container">
+				<h2 id="oscbr-cookiebar-title">Header title</h2>
+				<div class="oscbr-language-selector" id="oscbr-language-selector">
+					<select id="oscbr-language-select" tabindex="-1">
+						<!-- Languages will be populated dynamically -->
+					</select>
+				</div>
 			</div>
-		</div>
 			<p id="oscbr-introduction">Introduction text</p>
 			<!-- Live region for status announcements -->
 			<div class="oscbr-sr-only" id="oscbr-consent-status"></div>
@@ -666,6 +733,7 @@
 			this.dismissible = typeof options.dismissible === "boolean" ? options.dismissible : true;
 			this.multilingual = typeof options.multilingual === "boolean" ? options.multilingual : false;
 			this.langAutoSelect = typeof options.langAutoSelect === "boolean" ? options.langAutoSelect : false;
+			this.defaultLang = typeof options.defaultLang === "string" ? options.defaultLang.trim() : "";
 
 			// Set consent endpoint (no default - must be explicitly provided if sendToServer is true)
 			this.consentEndpoint = (typeof options.consentEndpoint === "string" && options.consentEndpoint.trim() !== "")
@@ -678,22 +746,35 @@
 				this.textsArray = options.texts;
 				this.currentLanguage = null; // will be set next time we call initLanguageSelector
 
-			// Determine which language to use FIRST
-			if (this.textsArray.length > 0) {
-				// Auto-select language based on browser settings (only if multilingual is enabled)
-				if (this.multilingual && this.langAutoSelect) {
-					this.currentLanguage = this.detectBrowserLanguage();
-					if (this.currentLanguage) {
-						this.log("DEBUG", "Auto-detected language: " + this.currentLanguage);
+				// Determine which language to use FIRST
+				if (this.textsArray.length > 0) {
+					// Auto-select language based on browser settings (only if multilingual is enabled)
+					if (this.multilingual && this.langAutoSelect) {
+						this.currentLanguage = this.detectBrowserLanguage();
+						if (this.currentLanguage) {
+							this.log("DEBUG", "Auto-detected language: " + this.currentLanguage);
+						}
+					}
+
+					// Fallback to first language if no match or if multilingual is disabled
+					if (!this.currentLanguage) {
+						var configuredDefault = this.defaultLang;
+						var defaultExists = false;
+						for (var i = 0; i < this.textsArray.length; i++) {
+							if (this.textsArray[i].lang === configuredDefault) {
+								defaultExists = true;
+								break;
+							}
+						}
+
+						if (configuredDefault && defaultExists) {
+							this.currentLanguage = configuredDefault;
+						} else {
+							this.currentLanguage = this.textsArray[0].lang;
+						}
+						this.log("DEBUG", "Using default language: " + this.currentLanguage);
 					}
 				}
-
-				// Fallback to first language if no match or if multilingual is disabled
-				if (!this.currentLanguage) {
-					this.currentLanguage = this.textsArray[0].lang;
-					this.log("DEBUG", "Using default language: " + this.currentLanguage);
-				}
-			}
 
 				// Get current language texts
 				this.texts = this.getTextsForLanguage(this.currentLanguage) || {};
@@ -797,18 +878,18 @@
 			// Configure UI based on category settings (hide/disable switches for required categories)
 			this.configureCategoryUI();
 
-		// Configure close behavior based on dismissible setting
-		if (this.dismissible) {
-			// Modal is dismissible: show close button and attach listeners
-			if (this.domElements.closeBtn) this.domElements.closeBtn.style.display = "";
-			// Attach close handlers (bound to this instance for correct context)
-			this.addEventListener(this.domElements.closeBtn, "click", this.handleCloseBtn.bind(this));
-			this.addEventListener(this.modal, "click", this.handleBackgroundClick.bind(this));
-			this.addEventListener(document, "keydown", this.handleEscapeKey.bind(this));
-		} else {
-			// Modal is NOT dismissible: hide close button and do not attach listeners
-			if (this.domElements.closeBtn) this.domElements.closeBtn.style.display = "none";
-		}
+			// Configure close behavior based on dismissible setting
+			if (this.dismissible) {
+				// Modal is dismissible: show close button and attach listeners
+				if (this.domElements.closeBtn) this.domElements.closeBtn.style.display = "";
+				// Attach close handlers (bound to this instance for correct context)
+				this.addEventListener(this.domElements.closeBtn, "click", this.handleCloseBtn.bind(this));
+				this.addEventListener(this.modal, "click", this.handleBackgroundClick.bind(this));
+				this.addEventListener(document, "keydown", this.handleEscapeKey.bind(this));
+			} else {
+				// Modal is NOT dismissible: hide close button and do not attach listeners
+				if (this.domElements.closeBtn) this.domElements.closeBtn.style.display = "none";
+			}
 
 			// Button handlers: accept / deny / save
 			this.addEventListener(this.domElements.acceptBtn, "click", function () {
@@ -1094,19 +1175,19 @@
 				select.appendChild(option);
 			}
 
-		// Set the current language as selected
-		if (this.currentLanguage) {
-			select.value = this.currentLanguage;
-		}
+			// Set the current language as selected
+			if (this.currentLanguage) {
+				select.value = this.currentLanguage;
+			}
 
-		// Show the language selector and include in tab order
-		selectorContainer.style.display = "block";
-		select.setAttribute("tabindex", "0");
+			// Show the language selector and include in tab order
+			selectorContainer.style.display = "block";
+			select.setAttribute("tabindex", "0");
 
-		// Attach change handler
-		this.addEventListener(select, "change", function () {
-			that.switchLanguage(this.value);
-		});
+			// Attach change handler
+			this.addEventListener(select, "change", function () {
+				that.switchLanguage(this.value);
+			});
 		};
 
 		/**
@@ -1879,61 +1960,61 @@
 			}
 		};
 
-	/** Show the modal */
-	PrivacyGenerator.prototype.showModal = function () {
-		this.modal.style.display = "block";
-		// Ensure ARIA attributes are initialized (in case modal was created dynamically)
-		if (!this.modal.getAttribute("aria-modal")) {
-			this.modal.setAttribute("aria-modal", "true");
-			this.modal.setAttribute("aria-labelledby", "oscbr-cookiebar-title");
-		}
-		// Set up focus trap and initial focus when modal is shown
-		this.focusTrap(this.modal);
-		this.setInitialFocus(this.modal, this.autoFocus, this.multilingual);
-	};
+		/** Show the modal */
+		PrivacyGenerator.prototype.showModal = function () {
+			this.modal.style.display = "block";
+			// Ensure ARIA attributes are initialized (in case modal was created dynamically)
+			if (!this.modal.getAttribute("aria-modal")) {
+				this.modal.setAttribute("aria-modal", "true");
+				this.modal.setAttribute("aria-labelledby", "oscbr-cookiebar-title");
+			}
+			// Set up focus trap and initial focus when modal is shown
+			this.focusTrap(this.modal);
+			this.setInitialFocus(this.modal, this.autoFocus, this.multilingual);
+		};
 
-	/**
-	 * Close handler for close button
-	 * Closes the modal and returns focus to previously focused element
-	 */
-	PrivacyGenerator.prototype.handleCloseBtn = function () {
-		if (this.modal) {
-			this.modal.style.display = "none";
-			this.returnFocus();
-		}
-	};
-
-	/**
-	 * Close handler for background click
-	 * Closes the modal when clicking on the overlay background
-	 * @param {Event} event - Click event
-	 */
-	PrivacyGenerator.prototype.handleBackgroundClick = function (event) {
-		if (event.target === this.modal) {
-			this.modal.style.display = "none";
-			this.returnFocus();
-		}
-	};
-
-	/**
-	 * Close handler for Escape key
-	 * Closes the modal when pressing Escape key
-	 * @param {KeyboardEvent} event - Keyboard event
-	 */
-	PrivacyGenerator.prototype.handleEscapeKey = function (event) {
-		if (event.key === "Escape" || event.keyCode === 27) {
-			if (this.modal && this.modal.style.display === "block") {
+		/**
+		 * Close handler for close button
+		 * Closes the modal and returns focus to previously focused element
+		 */
+		PrivacyGenerator.prototype.handleCloseBtn = function () {
+			if (this.modal) {
 				this.modal.style.display = "none";
 				this.returnFocus();
 			}
-		}
-	};
+		};
 
-	// Expose PrivacyGenerator globally
-	window.PrivacyGenerator = PrivacyGenerator;
-})();
+		/**
+		 * Close handler for background click
+		 * Closes the modal when clicking on the overlay background
+		 * @param {Event} event - Click event
+		 */
+		PrivacyGenerator.prototype.handleBackgroundClick = function (event) {
+			if (event.target === this.modal) {
+				this.modal.style.display = "none";
+				this.returnFocus();
+			}
+		};
 
-// Initialize the CMP instance
+		/**
+		 * Close handler for Escape key
+		 * Closes the modal when pressing Escape key
+		 * @param {KeyboardEvent} event - Keyboard event
+		 */
+		PrivacyGenerator.prototype.handleEscapeKey = function (event) {
+			if (event.key === "Escape" || event.keyCode === 27) {
+				if (this.modal && this.modal.style.display === "block") {
+					this.modal.style.display = "none";
+					this.returnFocus();
+				}
+			}
+		};
+
+		// Expose PrivacyGenerator globally
+		window.PrivacyGenerator = PrivacyGenerator;
+	})();
+
+	// Initialize the CMP instance
 	// Get modal element
 	var oscbrModal = document.getElementById("oscbr");
 
@@ -1946,6 +2027,7 @@
 		dismissible: true,								// If true, modal can be closed; if false, user must make a choice
 		multilingual: true,								// If true, enable language selection dropdown
 		langAutoSelect: true,						// If true, automatically select language based on browser settings
+		defaultLang: "cs",							// Default language to use if autoselect is disabled or fails; fallback is texts[0].lang
 		autoFocus: true,							// If true, automatically focus modal when shown (prioritizes language selector); if false, no automatic focus
 		sendToServer: false,						// If true, consent updates are sent to server; if false, no server requests are made
 		consentEndpoint: "http://localhost:8080/consent-hit", // Full endpoint URL for consent updates; REQUIRED when sendToServer is true
@@ -2034,6 +2116,39 @@
 					marketing: {
 						header: "Marketing and advertising cookies",
 						body: "These cookies are set by our advertising partners and track your activity across different websites. They are used to build a profile of your interests and display relevant ads on other sites. They do not directly store your personal data but are based on unique identification of your browser and device. If you do not allow these cookies, you will see less targeted advertising."
+					}
+				}
+			},
+			{
+				lang: "sk",
+				header: "Nastavenie ochrany súkromia",
+				intro: 'Tento web využíva súbory cookies a podobné technológie na spracovanie vašich osobných údajov. Niektoré cookies sú nevyhnutné pre správny chod webu, zatiaľ čo voliteľné nám pomáhajú prispôsobiť obsah a reklamy vašim potrebám, merať výkon webu a lepšie porozumieť našej návštevnosti. Kliknutím na „Prijať všetko" súhlasíte s ich použitím. Svoju voľbu môžete kedykoľvek zmeniť. Viac informácií nájdete v našich <a href="/zasady-ochrany-osobnich-udaju">Zásadách ochrany osobných údajov</a>.',
+				buttons: {
+					accept: "Prijať všetko",
+					deny: "Iba nevyhnutné",
+					save: "Uložiť moje nastavenie"
+				},
+				statusMessages: {
+					accepted: "Všetky cookies boli prijaté",
+					denied: "Voliteľné cookies boli odmietnuté",
+					saved: "Nastavenie cookies bolo uložené"
+				},
+				categories: {
+					required: {
+						header: "Nevyhnutné cookies",
+						body: "Tieto cookies sú nevyhnutné pre základné fungovanie webu a nie je možné ich vypnúť. Zabezpečujú kľúčové funkcie, ako je bezpečná navigácia medzi stránkami, zapamätanie obsahu košíka, prihlásenie k užívateľskému účtu, vyplnenie formulárov a uloženie vášho nastavenia súhlasu s cookies. Nezhromažďujú žiadne informácie, ktoré by mohli byť použité na marketingové účely."
+					},
+					analytical: {
+						header: "Analytické a výkonnostné cookies",
+						body: "Tieto cookies zhromažďujú anonymizované informácie o tom, ako web používate — napríklad ktoré stránky navštevujete najčastejšie, ako dlho na nich zostávate, odkiaľ prichádzate a či sa stretávate s chybovými hláškami. Všetky dáta sú agregované a nie je možné z nich identifikovať konkrétnu osobu. Vďaka nim môžeme web neustále vylepšovať a prispôsobovať vašim potrebám."
+					},
+					preferences: {
+						header: "Cookies pre personalizáciu",
+						body: "Tieto cookies umožňujú webu zapamätať si voľby, ktoré ste urobili pri predchádzajúcich návštevách — napríklad preferovaný jazyk, región, veľkosť písma alebo iné prispôsobenie zobrazenia. Ak tieto cookies nepovolíte, niektoré alebo všetky tieto funkcie nemusia spoľahlivo fungovať."
+					},
+					marketing: {
+						header: "Marketingové a reklamné cookies",
+						body: "Tieto cookies nastavujú naši reklamní partneri a sledujú vašu aktivitu naprieč rôznymi webmi. Slúžia na vytvorenie profilu vašich záujmov a zobrazenie relevantných reklám na iných stránkach. Priamo neukladajú vaše osobné údaje, ale sú založené na jedinečnej identifikácii vášho prehliadača a zariadenia. Ak tieto cookies nepovolíte, budú sa vám zobrazovať menej cielené reklamy."
 					}
 				}
 			}

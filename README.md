@@ -6,7 +6,7 @@ Cookie consent banner s integrací **Google Consent Mode v2**, navržený pro na
 
 - **Google Consent Mode v2** — automaticky nastavuje `consent default` a `consent update` pro všechny typy souhlasu (analytics_storage, ad_storage, ad_user_data, ad_personalization, personalization_storage, functionality_storage, security_storage)
 - **4 kategorie cookies** — Nezbytné (vždy zapnuté), Analytické, Personalizační, Marketingové
-- **Vícejazyčná podpora** — CZ a EN out of the box, snadno rozšiřitelné o další jazyky
+- **Vícejazyčná podpora** — CZ, EN a SK out of the box, snadno rozšiřitelné o další jazyky
 - **Automatická detekce jazyka** — podle nastavení prohlížeče
 - **Accordion UI** — vždy max jedna kategorie rozbalená
 - **Responsivní design** — na mobilu se zobrazí jako bottom sheet
@@ -35,6 +35,7 @@ var options = {
     dismissible: true,          // false = uživatel MUSÍ zvolit (nelze zavřít křížkem/Escape)
     multilingual: true,         // true = zobrazí dropdown pro výběr jazyka
     langAutoSelect: true,       // true = automaticky vybere jazyk podle prohlížeče
+    defaultLang: "cs",          // výchozí jazyk, pokud je autodetekce vypnutá nebo selže
     sendToServer: false,        // true = odesílá souhlas na server (vyžaduje apiKey a consentEndpoint)
     logLevel: "INFO",           // NONE, ERROR, WARN, INFO, DEBUG
     // ...
@@ -178,7 +179,8 @@ texts: [
 
 ```javascript
 multilingual: false,     // skryje dropdown pro výběr jazyka
-langAutoSelect: false,   // nedetekuje jazyk prohlížeče — použije první jazyk v poli texts
+langAutoSelect: false,   // nedetekuje jazyk prohlížeče
+defaultLang: "sk",       // vynutí slovenštinu jako primární zobrazený jazyk
 ```
 
 ## Všechny konfigurační parametry
@@ -192,6 +194,7 @@ langAutoSelect: false,   // nedetekuje jazyk prohlížeče — použije první j
 | `dismissible` | boolean | `true` | Zda lze modal zavřít bez volby |
 | `multilingual` | boolean | `false` | Zobrazit dropdown pro výběr jazyka |
 | `langAutoSelect` | boolean | `false` | Automatická detekce jazyka prohlížeče |
+| `defaultLang` | string | `""` | Výchozí jazyk (např. `"sk"`), použitý pokud selže autodetekce |
 | `sendToServer` | boolean | `true` | Odesílat souhlas na server |
 | `consentEndpoint` | string | `""` | URL endpointu pro odesílání souhlasu |
 | `autoFocus` | boolean | `true` | Automatický focus na modal při zobrazení |
